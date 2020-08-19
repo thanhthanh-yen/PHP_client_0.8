@@ -1,0 +1,31 @@
+
+name: Install GridDB server, C client, build PHP client and execute PHP sample
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup environment
+      run: |
+        chmod +x ./.github/workflows/setup_environment.sh
+        ./.github/workflows/setup_environment.sh
+        
+    - name: Install and start server
+      run: |
+        chmod +x ./.github/workflows/start_server.sh    
+        ./.github/workflows/start_server.sh
+        
+    - name: Build GridDB PHP client and export library
+      run: |
+        make
+        echo "extension=/home/runner/work/php_client/php_client/griddb_php_client.so" | sudo tee -a /etc/php/7.4/cli/php.ini
+        
+    - name: Run GridDB PHP sample
+      run: |
+        php sample/sample1.php 239.0.0.1 31999 griddbubuntu admin admin
+        
