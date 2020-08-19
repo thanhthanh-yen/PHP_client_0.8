@@ -21,10 +21,10 @@ jobs:
     - name: Build GridDB PHP client and export library
       run: |
         make
-        pwd
         echo "extension=/home/runner/work/PHP_client_0.8/PHP_client_0.8/griddb_php_client.so" | sudo tee -a /etc/php/7.4/cli/php.ini
         
     - name: Run GridDB PHP sample
       run: |
-        php sample/sample1.php 239.0.0.1 31999 griddbubuntu admin admin
+        #php sample/sample1.php 239.0.0.1 31999 griddbubuntu admin admin
+         ./.github/workflows/auto_test_samples.sh
         
