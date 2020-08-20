@@ -8,11 +8,9 @@ phpunit test/testCode/BS008ContainerPutGetRemoveSpec.php
 phpunit test/testCode/BS009RowSetManualCommitSpec.php
 phpunit test/testCode/BS010QueryWithLimitSpec.php
 phpunit test/testCode/BS012ErrorUtilitySpec.php
+phpunit test/testCode/BS013PartitionController.php.php
 phpunit test/testCode/BS015ContainerInfoSetGetSpec.php
 phpunit test/testCode/BS016ExpirationInfoSetGetSpec.php
-phpunit test/testCode/BS017Performance/BS017LoopAggSpec.php
-phpunit test/testCode/BS017Performance/BS017LoopQueryRSSpec.php
-phpunit test/testCode/BS017Performance/BS017LoopQuerySpec.php
 phpunit test/testCode/BS018EnumSpec.php
 phpunit test/testCode/BS019AttributeSpec.php
 phpunit test/testCode/BS021KeywordParametersSpec.php
