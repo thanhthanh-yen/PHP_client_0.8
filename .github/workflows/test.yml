@@ -26,5 +26,5 @@ jobs:
     - name: Run GridDB PHP sample
       run: |
         #php sample/sample1.php 239.0.0.1 31999 griddbubuntu admin admin
-         ./.github/workflows/auto_test_samples.sh
+         ./.github/workflows/auto_test_scenario-base-test.sh
         
